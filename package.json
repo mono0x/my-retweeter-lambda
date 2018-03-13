@@ -1,0 +1,23 @@
+{
+  "name": "my-retweeter-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "GOOS=linux go build -tags netgo -installsuffix netgo -ldflags '-w -s -extldflags -static' -o bin/my-retweeter-lambda",
+    "deploy": "npm run build && sls deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono0x/my-retweeter-lambda.git"
+  },
+  "author": "mono",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mono0x/my-retweeter-lambda/issues"
+  },
+  "homepage": "https://github.com/mono0x/my-retweeter-lambda#readme",
+  "private": true,
+  "dependencies": {
+    "serverless": "^1.26.1"
+  }
+}

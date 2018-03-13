@@ -1,0 +1,23 @@
+service: my-retweeter-lambda
+
+provider:
+  name: aws
+  runtime: go1.x
+
+  stage: dev
+  region: ap-northeast-1
+  memorySize: 256
+
+  environment: ${file(env.yml)}
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  my-retweeter-lambda:
+    handler: bin/my-retweeter-lambda
+    events:
+      - schedule: 'cron(0/15 0-14,22-23 * * ? *)'
