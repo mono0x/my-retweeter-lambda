@@ -35,7 +35,7 @@ func handler() error {
 		userID := userID
 
 		eg.Go(func() error {
-			var v url.Values
+			v := url.Values{}
 			v.Set("count", "200")
 			v.Set("exclude_replies", "true")
 			v.Set("include_rts", "false")
