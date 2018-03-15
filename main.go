@@ -39,7 +39,7 @@ func handler() error {
 			v.Set("count", "200")
 			v.Set("exclude_replies", "true")
 			v.Set("include_rts", "false")
-			v.Set("user_id", string(userID))
+			v.Set("user_id", strconv.FormatInt(userID, 10))
 			timeline, err := api.GetUserTimeline(v)
 			if err != nil {
 				return err
