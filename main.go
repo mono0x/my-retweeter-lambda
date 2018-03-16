@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/ChimeraCoder/anaconda"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -30,6 +31,8 @@ func handler() error {
 		userIDs = append(userIDs, id)
 	}
 
+	date := time.Now().AddDate(0, -1, 0)
+
 	var eg errgroup.Group
 	for _, userID := range userIDs {
 		userID := userID
@@ -49,6 +52,15 @@ func handler() error {
 				if status.Retweeted {
 					continue
 				}
+
+				createdAt, err := status.CreatedAtTime()
+				if err != nil {
+					continue
+				}
+				if createdAt.Before(date) {
+					continue
+				}
+
 				if _, err := api.Retweet(status.Id, false); err != nil {
 					log.Println(err)
 				}
