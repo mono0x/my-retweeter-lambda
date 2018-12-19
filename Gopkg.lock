@@ -2,66 +2,99 @@
 
 
 [[projects]]
+  digest = "1:2ee1ec060a2e71d2eb24755cb3f3867c52faa9895d2287d3c3bf09b01020cf32"
   name = "github.com/ChimeraCoder/anaconda"
   packages = ["."]
+  pruneopts = "UT"
   revision = "9c68684170b980d5b4c2ed08fae9b530e659904d"
   version = "v2.0.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:088fd1efa8fcd4f85c3e3c0d135f28114115517a2b215f2e39b67146d032ea33"
   name = "github.com/ChimeraCoder/tokenbucket"
   packages = ["."]
+  pruneopts = "UT"
   revision = "c5a927568de7aad8a58127d80bcd36ca4e71e454"
 
 [[projects]]
+  digest = "1:8b4d009bfb2d13472dad368bf7520c482dd7f8a190436da4e6d52111c0a2e697"
   name = "github.com/aws/aws-lambda-go"
   packages = [
+    "events",
     "lambda",
     "lambda/messages",
-    "lambdacontext"
+    "lambdacontext",
   ]
-  revision = "fafa7e49388b8991caf99308e80655ba91816b72"
-  version = "v1.1.0"
+  pruneopts = "UT"
+  revision = "9e3676ee8ca83aee500682f382e10b9d03660093"
+  version = "v1.8.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:863cb3d06b96794fd14a54579116b7e704cd8bc395e9d0404a5ad236d3e198b4"
   name = "github.com/azr/backoff"
   packages = ["."]
+  pruneopts = "UT"
   revision = "53511d3c733003985b0b76f733df1f4d0095ee6a"
 
 [[projects]]
   branch = "master"
+  digest = "1:efe7dc6d12119a36c1a617b574e99ac9c5ca8fbff57eb283a60462552b7c782a"
   name = "github.com/dustin/go-jsonpointer"
   packages = ["."]
+  pruneopts = "UT"
   revision = "ba0abeacc3dcca5b9b20f31509c46794edbc9965"
 
 [[projects]]
   branch = "master"
+  digest = "1:07263fbfa1c038e890b410f730279aa7adc217180f1c2f78c6dc80b3bbe9e819"
   name = "github.com/dustin/gojson"
   packages = ["."]
+  pruneopts = "UT"
   revision = "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30"
 
 [[projects]]
   branch = "master"
+  digest = "1:4dd8162554e3819a3978cafaab26478336cbcbd00d09c76928a30a3e6b273bc4"
+  name = "github.com/fnproject/fdk-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "225736950b1c233d370a4c97cd4633f2198deec9"
+
+[[projects]]
+  branch = "master"
+  digest = "1:b5cfd8d62c46082a75974f2f5e167c272f7f7d47c7a21caf49b17a45a558a601"
   name = "github.com/garyburd/go-oauth"
   packages = ["oauth"]
-  revision = "4cff9ef7b7003713efa191899dbaab8fa75e3e73"
+  pruneopts = "UT"
+  revision = "bca2e7f09a178fd36b034107a00e2323bca6a82e"
 
 [[projects]]
   branch = "master"
+  digest = "1:76ee51c3f468493aff39dbacc401e8831fbb765104cbf613b89bef01cf4bad70"
   name = "golang.org/x/net"
   packages = ["context"]
-  revision = "d0aafc73d5cdc42264b0af071c261abac580695e"
+  pruneopts = "UT"
+  revision = "e147a9138326bc0e9d4e179541ffd8af41cff8a9"
 
 [[projects]]
   branch = "master"
+  digest = "1:b521f10a2d8fa85c04a8ef4e62f2d1e14d303599a55d64dabf9f5a02f84d35eb"
   name = "golang.org/x/sync"
   packages = ["errgroup"]
-  revision = "fd80eb99c8f653c847d294a001bdf2a3a6f768f5"
+  pruneopts = "UT"
+  revision = "42b317875d0fa942474b76e1b46a6060d720ae6e"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "dfb1315e7455396874720e3d3ae030907532cf2f75795bb22cccb0b08e974684"
+  input-imports = [
+    "github.com/ChimeraCoder/anaconda",
+    "github.com/aws/aws-lambda-go/events",
+    "github.com/aws/aws-lambda-go/lambda",
+    "github.com/fnproject/fdk-go",
+    "golang.org/x/sync/errgroup",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
