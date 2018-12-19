@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "GOOS=linux go build -tags netgo -installsuffix netgo -ldflags '-w -s -extldflags -static' -o bin/my-retweeter-lambda",
-    "deploy": "npm run build && sls deploy"
+    "deploy": "npm run build && sls deploy -s prod"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   "homepage": "https://github.com/mono0x/my-retweeter-lambda#readme",
   "private": true,
   "dependencies": {
-    "serverless": "^1.26.1"
+    "serverless": "^1.35.1"
   }
 }
