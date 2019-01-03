@@ -1,9 +1,7 @@
 /.serverless/
-/_tools/
 /bin/
 /config/
 /node_modules/
-/vendor/
 
 /assets.go
 /env.yml
