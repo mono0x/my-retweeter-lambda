@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "GO111MODULE=on GOOS=linux go build -tags netgo -installsuffix netgo -ldflags '-w -s -extldflags -static' -o bin/my-retweeter-lambda",
-    "deploy": "npm run build && sls deploy -s prod"
+    "deploy": "yarn run build && sls deploy -s prod"
   },
   "repository": {
     "type": "git",
